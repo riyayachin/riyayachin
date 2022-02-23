@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riyasewana | Search</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="./vender/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./vender/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+    <link href="./vender/bootstrap/css/bootstrap-reboot.min.css" rel="stylesheet">
+    <!-- Font Awesome icons (free version)-->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./vender/bootstrap/css/aos.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark" id="form-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="homepage.html"><span class="other">RIYASEWANA</span></a>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contribute.html">Contribute</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Login
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="profile.html">My Profile</a>
+                            <a class="dropdown-item" href="index.html">Registration</a>
+                            <a class="dropdown-item" href="Login.html">Login</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="freeadd" href="addpost.html">Post FREE Vehicle AD</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Books header -->
+    <div class="books-header">
+    </div>
+
+    <div class="container">
+        <section>
+            <div class="books-container">
+
+                <!-- sideMenu -->
+                <div class="box-1">
+                    <div class="msticky">
+                        <h5 class="text-center"><b>Search Your Vehicle Here</b></h5>
+                        <div class="group p-5 text-left">
+                            <label class="text-black font-weight-bold" for="validationDefault04">Model <span class="text-danger">*</span>
+                            </label>
+                            <form class="form-inline my-2 my-lg-0 ">
+                                
+                                <input class="form-control mr-sm-2 mb-3" id="search" type="search" placeholder="Search"
+                                    aria-label="Search">
+                            </form>
+                            <form>
+                                <label class="text-black font-weight-bold" for="validationDefault04">Select City <span class="text-danger">*</span>
+                                </label>
+                                <select class="custom-select mr-sm-2 mb-3" id="city">
+                                    <option selected Dropdown-item active="item">Any city</option>
+                                    <option class="item">Homagama</option>
+                                    <option class="item">Colombo</option>
+                                    <option class="item">Kaduwela</option>
+                                    <option class="item">Malabe</option>
+                                    <option class="item">Hanwella</option>
+                                    <option class="item">Badulla</option>
+                                    <option class="item">Kelaniya</option>
+                                    <option class="item">Galle</option>
+                                    <option class="item">Matara</option>
+                                </select>
+                            </form>
+                            <form>
+                                <label class="text-black font-weight-bold" for="validationDefault04">Select Type <span class="text-danger">*</span>
+                                </label>
+                                <select class="custom-select mr-sm-2 mb-3" id="vehicleType">
+                                    <option selected Dropdown-item active="item">Any type</option>
+                                    <option class="item">Car</option>
+                                    <option class="item">Van</option>
+                                    <option class="item">Morterbike</option>
+                                    <option class="item">SUV</option>
+                                    <option class="item">Lorry</option>
+                                    <option class="item">Bus</option>
+                                    <option class="item">Truck</option>
+                                    <option class="item">Three Weel</option>
+                                </select>
+                            </form>
+                            <form>
+                                <label class="text-black font-weight-bold" for="validationDefault04">Select Condition <span class="text-danger">*</span>
+                                </label>
+                                <select class="custom-select mr-sm-2 mb-3" id="vehicleType">
+                                    <option selected Dropdown-item active="item">Any conditon</option>
+                                    <option class="item">Brand New</option>
+                                    <option class="item">Used</option>
+                                    <option class="item">Unregistered</option>
+                                    <option class="item">Registered</option>
+                                    <option class="item">Antiqeu</option>
+                                </select>
+                            </form>
+                            <form>
+                                <label class="text-black font-weight-bold" for="validationDefault04">Select Brand <span class="text-danger">*</span>
+                                </label>
+                                <select class="custom-select mr-sm-2 mb-3" id="vehicleType">
+                                    <option selected Dropdown-item active="item">Any brand</option>
+                                    <option class="item">Honda</option>
+                                    <option class="item">Toyota</option>
+                                    <option class="item">BMW</option>
+                                    <option class="item">Benz</option>
+                                    <option class="item">Land Rover</option>
+                                    <option class="item">Susuki</option>
+                                    <option class="item">Yamaha</option>
+                                    <option class="item">KIA</option>
+                                    <option class="item">Bajaj</option>
+                                    <option class="item">Kawasaki</option>
+                                    <option class="item">TVS</option>
+                                    <option class="item">Isusu</option>
+                                    <option class="item">Leyland</option>
+                                    <option class="item">Tata</option>
+                                    <option class="item">Mahendra</option>
+                                </select>
+                            </form>
+                            <form>
+                                <label class="text-black font-weight-bold" for="validationDefault04">Select Fuel<span class="text-danger">*</span>
+                                </label>
+                                <select class="custom-select mr-sm-2 mb-3" id="vehicleType">
+                                    <option selected Dropdown-item active="item">Any fuel</option>
+                                    <option class="item">Diesal</option>
+                                    <option class="item">Petrol</option>
+                                    <option class="item">Electric</option>
+                                    <option class="item">Hybrid</option>
+                                </select>   
+                            </form>
+                            <form>
+                                <label class="text-black font-weight-bold" for="validationDefault04">Select Gear <span
+                                    class="text-danger">*</span></label>
+                            <select class="custom-select mr-sm-2 mb-3" id="vehicleCondition">
+                                <option selected Dropdown-item active="item">Any gear</option>
+                                <option>Auto</option>
+                                <option>Manual</option>
+                            </select>
+                            </form>
+                            <form>
+                                <label class="text-black font-weight-bold" for="validationDefault04">Year<span
+                                    class="text-danger">*</span></label></label>
+                                <div class="form-row">
+                                    
+                                    <div class="col-md-5">
+                                        <form">
+                                            <input class="form-control mr-sm-2 mb-1" id="min" type="search" placeholder="year min"
+                                                aria-label="Search">
+                                        </form>
+                                    </div>
+            
+                                    <div class="col-md-5">
+                                        <form>
+                                            <input class="form-control mr-sm-2 mb-1" id="max" type="search" placeholder="year max"
+                                                aria-label="Search">
+                                        </form>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="buton mr-5">
+                            <button class="btn btn-info my-2 my-sm-0 float-right"
+                                type="submit" onclick="popUp()">Search</button>
+                        </div>
+                        <br><br><br><br>
+
+                    </div>
+                </div>
+
+                <div class="box-2">
+                    <div class="booksList">
+                        <div class="topic">
+                            <h5>Displaying 1 - 60 of 884 Search Results</h5 >
+                            <hr>
+                        </div>
+
+                        <!--Start Card Section -->
+                        <section class="container mt-5 mb-5">
+                            <div class="card-group mt-5">
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Toyota Allion 260 2007 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">RS 500,000 </span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img2.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Honda Civic Es3 Rs 2000 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-group mt-5">
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img3.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Hyundai Tucson 2011 SUV</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img4.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Perodua Viva Elite 2011 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-group mt-5">
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img5.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Toyota Axio G Grade 2015 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img6.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Honda N Wgn Cbe 2016 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-group mt-5">
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img8.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Toyota Aqua 2012 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img2.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Suzuki Wagon R 2015 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-group mt-5">
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img9.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Toyota Premio 2010 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="card shadow m-2">
+                                    <a href="add1.html">
+                                        <div class="card card-cascade card-ecommerce">
+                                            <!--Card image-->
+                                            <div class="view view-cascade overlay">
+                                                <img class="card-img-top"
+                                                    src="./img/img/buyvanpage/img2.jpg"
+                                                    alt="">
+                                                <a>
+                                                    <div class="mask rgba-white-slight"></div>
+                                                </a>
+                                            </div>
+                                            <!--/.Card image-->
+                                            <!--Card content-->
+                                            <div class="card-body card-body-cascade text-center">
+                                                <!--Category & Title-->
+                                                <h5>Suzuki Wagon R 2015 Car</h5>
+                                                <!--Description-->
+                                                <p class="card-text">Temporibus autem quibusdam et aut officiis debitis
+                                                    aut
+                                                    rerum
+                                                    necessitatibus saepe
+                                                    eveniet ut et voluptates.
+                                                </p>
+                                                <!--Card footer-->
+                                                <div class="card-footer">
+                                                    <span class="float-left">49$ <span
+                                                            class="discount">199$</span></span>
+                                                    <span class="float-right"><a class="" data-toggle="tooltip"
+                                                            data-placement="top" title="Add to Wishlist"><i
+                                                                class="fas fa-heart"></i></a></span>
+                                                </div>
+                                            </div>
+                                            <!--/.Card content-->
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <!--End Card Section -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="container-fluid page-footer font-small pt-4 bg-dark text-light">
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+            <!-- Footer links -->
+            <div class="row text-center text-md-left mt-3 pb-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3 ">
+                    <h6 class="text-uppercase mb-4 font-weight-bold">Riyasewana Srilanka</h6>
+                    <p>
+                        Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                        consectetur adipisicing elit.
+                    </p>
+                </div>
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h6 class="text-uppercase mb-4 font-weight-bold ">Useful links</h6>
+                    <p>
+                        <a class="text-decoration-none" href="homepage.html">Home</a>
+                    </p>
+                    <p>
+                        <a class="text-decoration-none" href="addpost.html">Post FREE Vehicle AD </a>
+                    </p>
+                    <p>
+                        <a class="text-decoration-none" href="contactus.html">Contact us</a>
+                    </p>
+                    <p>
+                        <a class="text-decoration-none" href="contribute.html">Contribute</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+                <hr class="w-100 clearfix d-md-none">
+                <!-- Grid column -->
+                <div id="contact" class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h6 id="contacus" class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                    <p>
+                        <i class="fas fa-home mr-3"></i> No :- 15/1, Awissawella
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> infogmail@gmail.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88
+                    </p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 01 234 567 89
+                    </p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Footer links -->
+            <hr>
+            <!-- Grid row -->
+            <div class="row d-flex align-items-center">
+                <!-- Grid column -->
+                <div class="col-md-4">
+                    <div>
+                        <div class="">
+                            <p>Copyright ..&copy 2020; <span id="year"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-4 ml-lg-0">
+                    <!-- Social buttons -->
+                    <div class="text-center text-md-right">
+                        <ul class="list-unstyled list-inline">
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                    <i class="fab fa-google-plus-g"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+    </footer>
+
+    <!--Start back to up button-->
+    <a href="#" class="scrollUpButton">&#9650</a>
+    <!--End back to up button-->
+
+    <script src="http://cdnjs.cloudflare.com/ajaxlibs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajaxlibs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./vender/jquery/jquery.min.js "></script>
+    <script src="./vender/bootstrap/js/bootstrap.js "></script>
+    <script src="./vender/bootstrap/js/bootstrap.bundle.min.js "></script>
+
+    <!--Bak to up-->
+    <script src="./vender/jquery/backtoup.js"></script>
+
+    <!--Copy Right Date-->
+    <script>
+        $('#year').text(new Date().getFullYear());
+
+        $('.carousel').carousel({
+            interval: 2500,
+            pus: 'hover'
+        });
+    </script>
+
+<script>
+    function popUp() {
+
+        var search;
+        var min;
+        var max;
+
+        var search = document.getElementById('search').value;
+        var min = document.getElementById('min').value;
+        var max = document.getElementById('max').value;
+
+        if (search == null || search == "" ||
+            min == null || min == "" ||
+            max == null || max == "") {
+            sweetAlert("Oops...", "Some details are missing, Please fill!", "error");
+        } 
+    }
+</script>
+
+
+</body>
+
+</html>
